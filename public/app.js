@@ -6,5 +6,10 @@ jokeButn.addEventListener("click", async () => {
     const data = await response.json();
 
     jokeContainerElement.textContent = "Joke: " + data.value;
+    jokeButn.textContent = "Give me a new joke";
+
+    if(jokeContainerElement.style.width !== "30rem") {
+        jokeContainerElement.style.width = "30rem"
+    }
 });
 
